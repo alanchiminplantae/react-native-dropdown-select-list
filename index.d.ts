@@ -11,6 +11,7 @@ export interface SelectListProps  {
     */
     placeholder?: string,
     emptyPlaceholder?: string,
+    searchPlaceholder?: string,
 
     /**
     * Additional styles for select box

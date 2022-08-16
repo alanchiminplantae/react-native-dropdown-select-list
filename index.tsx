@@ -21,6 +21,7 @@ interface SelectListProps  {
     */
     placeholder?: string,
     emptyPlaceholder?: string,
+    searchPlaceholder?: string,
 
     /**
     * Additional styles for select box
@@ -83,6 +84,7 @@ const SelectList: React.FC<SelectListProps> = ({
         setSelected,
         placeholder,
         emptyPlaceholder,
+        searchPlaceHolder,
         boxStyles,
         inputStyles,
         dropdownStyles,
@@ -164,7 +166,7 @@ const SelectList: React.FC<SelectListProps> = ({
                             }
                             
                             <TextInput 
-                                placeholder='search'
+                                placeholder={searchPlaceHolder ?? 'Pesquisar'}
                                 onChangeText={(val) => {
                                     let result =  data.filter((item) => {
                                         val.toLowerCase();
