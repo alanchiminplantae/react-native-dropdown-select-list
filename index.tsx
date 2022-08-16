@@ -20,6 +20,7 @@ interface SelectListProps  {
     * Placeholder text that will be displayed in the select box
     */
     placeholder?: string,
+    emptyPlaceholder?: string,
 
     /**
     * Additional styles for select box
@@ -81,6 +82,7 @@ interface SelectListProps  {
 const SelectList: React.FC<SelectListProps> = ({
         setSelected,
         placeholder,
+        emptyPlaceholder,
         boxStyles,
         inputStyles,
         dropdownStyles,
@@ -227,7 +229,7 @@ const SelectList: React.FC<SelectListProps> = ({
                                     setTimeout(() => setFilteredData(data), 800)
                                     
                                 }}>
-                                    <Text style={dropdownTextStyles}> No data found</Text>
+                                    <Text style={dropdownTextStyles}> {emptyPlaceholder ?? 'Não existem dados cadastrados'}</Text>
                                 </TouchableOpacity>
                             }
                             

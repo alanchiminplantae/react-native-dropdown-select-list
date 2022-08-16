@@ -10,6 +10,7 @@ export interface SelectListProps  {
     * Placeholder text that will be displayed in the select box
     */
     placeholder?: string,
+    emptyPlaceholder?: string,
 
     /**
     * Additional styles for select box
